@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces I</title>
+    <!-- 
+        Los enlaces son utilizados practicamente en todos los sitios web y su fin es permitir al usuario navegar entre paginas (internas o externas al sitio).
+    
+        Para definir un enlace utilizamos la etiqueta a (anchor), con un atributo obligatorio href donde especificamos la ruta del recurso o sitio que queremos obtener.
+
+        Tambien tienen un atributo target, que define como queremos abrir el recurso o sitio que solicitamos.
+
+        Importante: No es necesario que los enlaces contengan texto, tambien pueden contener imagenes o cualquier elemento HTML en su interior.
+
+        En las rutas relativas se omite el dominio (por ej google.com) y se indica la dirección relativa hacia el documento el cual queremos encontrar.
+        Son relativas a donde estamos parados con ese documento.
+
+        En las rutas absolutas, se debe colocar el protocolo y la dirección entera hacia el recurso externo.
+    -->
+</head>
+<body>
+    <a href="02-estructuraBasica.html">Estructura Basica HTML</a> <!-- Ruta relativa a recurso local -->
+
+    <a href="/02-estructuraBasica.html">Estructura Basica HTML</a> <!-- Ruta relativa desde la raiz del proyecto -->
+
+    <a href="/">Ir al index</a> <!-- Me llevaria al index si se encontrara desplegado en un servidor -->
+
+    <a href="https://www.google.com">Ir a Google</a> <!-- Ruta absoluta a recurso externo -->
+
+    <a href="https://www.google.com" target="_blank">Ir a Google</a> <!-- Utilizo atributo target con valor _blank para abrir en otra pestaña del navegador. Por lo general se suele utilizar cuando se trata de enlaces a sitios externos -->
+
+    <a href="02-estructuraBasica.html" target="_self">Ir al primer documento del curso</a> <!-- Target como _self haria lo mismo que hasta ahora, abrirlo por sobre donde se encuentra. No es necesario colocarlo puesto a que es el valor por default -->
+
+    <a href="assets/gato.jpg" download>Descargar imagen de gato</a> <!-- Atributo download indica que debe descargar el archivo. SOLO sirve para recursos locales al servidor y no externos -->
+
+    <a href="mailto:persona@mail.com">Contactar por correo</a> <!-- Llink que abre la aplicacion de correo del usuario permitiendole escribir un correo a la direccion indicada -->
+        
+    <p><a href="09-enlaces2.html#noticia3">Enlace a id de otro documento</a></p>
+</body>
+</html>

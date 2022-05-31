@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+    <!-- 
+        Las tablas HTML sirven para organizar y estructurar nuestro contenido.
+        
+        Estan compuestas por:
+            table: Etiqueta que encierra una tabla.
+
+            tr: Table row (fila de tabla) por cada una de las filas.
+
+            th: Table header (encabezado de tabla) por cada columna. Por defecto se muestran en negrita y centrados.
+
+            td: Table data (celda) por cada uno de los datos. Pueden contener cualquier tipo de elemento HTML dentro (texto, imagenes, listas, otras tablas, etc.)
+    
+            thead: Table head (cabecera de tabla), nos sirve para encerrar las filas con encabezados.
+
+            tbody: Table body (cuerpo de la tabla), nos sirve para encerrar el cuerpo, no es necesaria si especificamos un thead y el navegador la pone sola.
+            
+            tfoot: Table foot (pie de la tabla) opcional.
+
+            caption: Titulo de la tabla, opcional. De utilizarla, debe ir inmediatamente tras etiqueta table.
+
+        La cantidad de encabezados que tengamos va a definir cuantos td tengamos que tener por fila.
+    -->
+    <table>
+        <caption>HORARIO DE CLASES</caption>
+        <thead> <!-- Cabecera de la tabla -->
+            <tr> <!-- Primera fila con encabezados -->
+                <th></th> <!-- Encabezado vacio para columna de la hora -->
+                <th>L</th>
+                <th>M</th>
+                <th>X</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        </thead> 
+        <tr>
+            <td>8:30 - 9:30</td>
+            <td>Matemáticas</td>
+            <td>Matemáticas</td>
+            <td>Sociales</td>
+            <td>Matemáticas</td>
+            <td>Matemáticas</td>
+        </tr>
+        <tr>
+            <td>9:30 - 10:25</td>
+            <td>Lengua</td>
+            <td>Lengua</td>
+            <td>Matemáticas</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+        </tr>
+        <tr>
+            <td>10:25 - 11:20</td>
+            <td>Educación Física</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+            <td>Lengua</td>
+            <td>Educación Física</td>
+        </tr>
+        <tr>
+            <td>11:20 - 11:45</td>
+            <td>R E C R E O</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11:45 - 12:40</td>
+            <td>Inglés</td>
+            <td>Sociales</td>
+            <td>Inglés</td>
+            <td>Tutoría</td>
+            <td>Inglés</td>
+        </tr>
+        <tr>
+            <td>12:40 - 13:35</td>
+            <td>Música</td>
+            <td>Educación Física</td>
+            <td>Plástica</td>
+            <td>Religión</td>
+            <td>Música</td>
+        </tr>
+        <tr>
+            <td>13:35 - 14:30</td>
+            <td>Tecnología</td>
+            <td>Francés</td>
+            <td>Tecnología</td>
+            <td>Francés</td>
+            <td>Tecnología</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td>Total de materias</td>
+                <td>12</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

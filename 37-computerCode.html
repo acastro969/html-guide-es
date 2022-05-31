@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="programacion, desarrollo, creacion de sitios web, etiquetas html">
+    <meta name="description" content="Un curso desde 0 para aprender HTML.">
+    <meta name="author" content="Alfredo H. Castro Ranz">
+    <title>Computercode</title>
+    <!-- 
+        Computercode:
+        HTML Contiene multiples elementos para mostrar codigo o input del usuario.
+        
+        code: Para mostrar codigo computacional. Se muestra en fuente monospace. 
+            Importante: El elemento code no respeta los saltos de linea ni espaciados, por lo que para lograr esto puede colocarse dentro de un elemento pre.
+
+        output: Representa el resultado de un calculo, generalmente del resultado de un script. 
+
+        samp (Sample): Se utiliza para mostrar texto que suele ser resultante de la salida de un programa de computadora. Se muestra en fuente monospace.
+
+        var: Variable de programacion o expresion matematica. Se muestra en italica. 
+
+        kbd (Keyboard): Texto q refiera a teclas de teclado. Predefinidamente se muestra en fuente monospace. 
+    -->
+</head>
+<body>
+    <pre>
+        <code>
+            x = 5;
+            y = 6;
+            z = x + y;
+        </code>
+    </pre>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+    </form>
+
+    <p>Mensaje de la Computadora</p>
+    <p><samp>Archivo no encontrado. <br> Presiona F1 para continuar</samp></p>
+    
+    <p>El area de un triangulo es <var>b</var> x <var>a</var> / 2 donde <var>b</var> es la base y <var>a</var> la altura.</p>
+
+    <p>Presiona <kbd>CTRL</kbd> + <kbd>C</kbd> para copiar en Windows.</p>
+</body>
+</html>

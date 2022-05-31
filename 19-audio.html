@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+    <!-- 
+        Si queremos incluir audio a nuestro sitio podemos hacerlo mediante la etiqueta audio e indicandole en su atributo src donde buscar el recurso.
+        
+        Sin embargo lo mas correcto seria incluir la etiqueta audio y dentro colocar etiquetas source (al igual que como con Picture) con diversos source. Cada source corresponderia a los formatos en los que tengamos ese audio, en caso de que no logre cargar ese recurso o no soporte el formato, pasa al siguiente source. Si llegara hasta el final de la "lista" de sources sin haber reconocido o logrado cargar ninguno, muestra el texto que coloquemos en la etiqueta audio antes del cierre.
+
+        Para hacer que se muestren los controles de reproducción y volumen debemos colocar el atributo booleano controls sobre la etiqueta audio,
+        si queremos hacer que se reproduzca automaticamente deberemos colocarle el atributo autoplay, pero puesto a que los navegadores bloquean esto para que no sea "molesto" para el usuario, tambien hay que colocarle muted a su vez o de lo contrario no funciona el autoplay. Otro atributo disponible que tenemos es el loop si queremos que se repita en bucle infinitamente.
+    
+        Formatos comunmente soportados:
+        MP3 y WAV. OGG No soportado por Safari
+
+        Media types:
+        MP3: type="audio/mpeg"
+        OGG: type="audio/ogg"
+        WAV: type="audio/wav"
+    -->
+
+    <h2>Audio con un solo source</h2>
+    <audio src="assets/explosionMp3.mp3" type="audio/mpeg" controls autoplay muted loop></audio>
+
+    <h2>Audio con mas de un source</h2>
+    <audio controls>
+        <source src="assets/explosionOGG.ogg" type="audio/ogg">
+        <source src="assets/explosionMp3.mp3" type="audio/mpeg">
+        Su navegador no soporta el elemento de audio.
+    </audio>
+</body>
+</html>

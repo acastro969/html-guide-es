@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <!-- 
+        Las listas permiten agrupar elementos relacionados de forma desordenada u ordenada.
+        
+        ul: Unordered list (lista desordenada) sirve para listar elementos sin ninguna especie de orden especifico, como una lista de amigos o la lista de compras. 
+        
+        ol: Ordered list (lista ordenada) sirve para cuando los items listados llevan algun orden, como por ejemplo los pasos de una receta de cocina o un top10.
+        
+        dl: Definition list (lista de definiciones) se utiliza para listar terminos y explicar su significado como si se tratara de un glosario. 
+
+        Tanto las listas ordenadas como desordenadas llevaran dentro etiquetas li de list item (item de lista). Las listas de definiciones dl deberan llevaran dt de description term (termino a describir) y dd de definition description (descripcion).
+
+        Predefinidamente los item de las listas ordenadas se veran con puntos, los item de las listas desordenadas con bullets (puntitos) y las descripciones de la lista de definiciones se veran con una pequeña sangria.
+
+        Tambien es importante tener en cuenta que una de las utilizaciones del ul seria en nuestros menu de navegación.
+    -->
+    <h1>Listas</h1>
+
+    <h2>Mis amigos</h2>
+    <ul>
+        <li>Juan</li>
+        <li>Roberto</li>
+        <li>Milagros</li>
+    </ul>
+
+    <h2>Receta para una buena pizza casera</h2>
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quasi?</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cum cumque perspiciatis, molestias corporis et.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.</li>
+    </ol>
+
+    <h2>Glosario</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper Text Markup Language. Es el lenguaje de marcado que utilizan las paginas web.</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets o Hojas de Estilo en Cascada. Es el lenguaje de diseño para definir como se ven los documentos HTML.</dd>
+    </dl>
+
+    <h2>Lista desordenada en menú de navegación</h2>
+    <nav>
+        <ul>
+            <li><a href="">Seccion1</a></li>
+            <li><a href="">Seccion2</a></li>
+            <li><a href="">Seccion3</a></li>
+            <li><a href="">Seccion4</a></li>
+            <li><a href="">Seccion5</a></li>
+        </ul>
+    </nav>
+
+    <h2>Listas Anidadas: Paises</h2>
+    <ul>
+        <li>
+            Argentina
+            <ul>
+                <li>Provincias</li>
+                <li>Idioma</li>
+                <li>Cultura</li>
+            </ul>
+        </li>
+        <li>
+            Bolivia
+            <ul>
+                <li>Provincias</li>
+                <li>Idioma</li>
+                <li>Cultura</li>
+            </ul>
+        </li>
+        <li>
+            Chile
+            <ul>
+                <li>Provincias</li>
+                <li>Idioma</li>
+                <li>Cultura</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Cita</title>
+    <!--
+        Elementos de cita: En HTML contamos con varios elementos para definir citas de contenidos ya sean de sitios externos o por ejemplo de obras literarias.
+
+            blockquote: Define una seccion que es citada de otra pagina. El navegador por lo general agrega una indentacion a estas citas. Con el atributo cite podemos definir la web desde la cual se esta citando, esto es util para los buscadores pero no es visible por el usuario.
+
+            q (quote): El elemento q puede servirnos para colocar una cita corta, normalmente el navegador insertara comillas alrededor del texto.
+
+            abbr: Con abbr podemos 'explicar' el significado de una abreviatura o un acronimo, esto es util tanto para los visitantes de la web (ya que les permitira ver la 'explicacion' de este termino cuando coloquen su cursor encima, pero a su vez tambien es util para los navegadores y buscadores.
+
+            dfn: Termino de definicion, puede usarse dentro de un abbr. El contenido suele mostrarse en italica por los navegadores.
+        
+            cite: Sirve para citar nombres o titulos de obras creativas como pueden ser un libro, una cancion, una pelicula, etc. 
+            El navegador normalmente muestra el texto contenido por los cite en italica.
+
+            bdo (Bi-direccional override): Permite sobrescribir la direccion del texto encerrando en la etiqueta bdo. Su atributo dir debe indicar si el texto iria de izquierda a derecha (ltr) o de derecha a izquierda (rtl) lo cual mostraria el texto al reves.
+    -->
+</head>
+<body>
+    <blockquote cite="http://www.es.wikipedia.org/">
+        Wikipedia es una enciclopedia libre, pol&iacute;glota y editada de manera colaborativa. Es administrada por la Fundaci&oacute;n Wikimedia, una organizaci&oacute;n sin &aacute;nimo de lucro cuya financiaci&oacute;n est&aacute; basada en donaciones.
+    </blockquote>
+
+    <p>Google es <q>una compañía principal subsidiaria de la multinacional estadounidense Alphabet Inc.</q></p>
+    
+    <p>La <abbr title="Organizacion de las Naciones Unidas">ONU</abbr> fue fundada en 1945.</p>
+
+    <img src="assets/gioconda.webp" alt="La Gioconda" width="15%">
+    <p><cite>La Gioconda</cite> por Leonardo Da Vinci. 1503-1519.</p>
+</body>
+</html>

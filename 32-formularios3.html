@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios III</title>
+</head>
+<body>
+    <!-- 
+        Tipos de Input (2):
+
+        radio: Define un botón de radio, util para seleccionar una opcion entre varias. Si queremos darle este comportamiento de grupo en el que se pueda seleccionar solo un valor para la opcion, tenemos que darle a todos los input de ese grupo el mismo name. Y lo más importante, debemos asignarle un value que es el valor que se enviara para ese name al submitear el formulario.
+
+        checkbox: Nos permite una seleccion multiple entre diversas opciones. Para este cada input puede tener su propio name y al igual que el radio deberia llevar un value haciendo referencia a que valor debe tener ese name en el caso de enviarse.
+
+        list: Nos permite hacer una seleccion sobre una lista de opciones al igual que el elemento select, pero la diferencia es que este posee un buscador con el cual podremos buscar la opcion deseada de una manera más sencilla. Este input dentro debe llevar un datalist con un id igual al atributo list de ese input, de esta forma se le esta indicando a que lista hace referencia ese input y sobre cual va a realizar su busqueda. Las option llevarian cada una un atributo value y adicionalmente podriamos colocarles dentro un texto pero quedaria como una especie de descripcion, ya que lo que se muestra es el value. El name deberia tenerlo solo el input.
+
+        Otros:
+
+        select: Es un elemento que crea un campo desplegable que nos permite seleccionar una o multiples opciones. Cada una de sus opciones seria una etiqueta option y el nombre de la opcion iria en su atributo value. Nuestro select tambien deberia tener un name para el cual va a enviarse el valor de la opcion seleccionada. Para agrupar options podemos utilizar el elemento optgroup, que al colocarle un atributo label nos mostraria una especie de titulo para esa selección de campos.
+        Si quisieramos permitir una selección multiple, es colocando el atributo multiple en el select. Y para seleccionar más de una opción es manteniendo la tecla control y clickeando en las demas que querramos seleccionar.
+
+        meter: Nos sirve para indicar una medida en una escala de un tamaño conocido. Un ejemplo podria tratarse de una barra indicadora de la cantidad de combustible. Podemos darle los atributos min para especificar el valor minimo, max para el maximo. low para indicar debajo de cuanto seria considerado un valor "bajo", high para indicar desde donde seria considerado "alto" y optimum para considerar cual seria el valor optimo. Con el atributo value indicariamos donde se encuentra en la escala.
+
+        progress: Nos sirve para indicar el progreso generalmente asociado a una tarea. Podemos darle los atributos min, max y value (para el valor actual) entre otros.
+     -->
+    <h2>Preferencias</h2>
+    <form action="contacto.php">
+        <h3>Género</h3>
+        <div>
+            <input id="generoMasculino" name="genero" type="radio" value="m">
+            <label for="generoMasculino">Masculino</label>
+
+            <input id="generoFemenino" name="genero" type="radio" value="f">
+            <label for="generoFemenino">Femenino</label>
+
+            <input id="generoOtro" name="genero" type="radio" value="o">
+            <label for="generoOtro">Otro</label>
+        </div>
+        <br>
+        <h3>Seleccione que metodos de transporte utiliza:</h3>
+        <div>
+            <input id="transporteAuto" name="transporte1" type="checkbox" value="auto">
+            <label for="transporteAuto">Auto</label>
+
+            <input id="transporteMoto" name="transporte2" type="checkbox" value="moto">
+            <label for="transporteMoto">Moto</label>
+            
+            <input id="transporteBici" name="transporte3" type="checkbox" value="bici">
+            <label for="transporteBici">Bici</label>
+            
+            <input id="transporteMonopatin" name="transporteMonopatin" type="checkbox" value="monopatin">
+            <label for="transporteMonopatin">Monopatin</label>
+        </div>
+        <br>
+        <h3>Seleccione su instrumento favorito:</h3>
+        <div>
+            <select name="instrumentoFavorito">
+                <option disabled selected value>Seleccione una opción</option> <!-- Primera opcion default -->
+                <optgroup label="Cuerda">
+                    <option value="guitarra">Guitarra Criolla</option>
+                    <option value="bajo">Bajo</option>
+                </optgroup>
+                <optgroup label="Viento">
+                    <option value="flauta">Flauta</option>
+                </optgroup>
+                <optgroup label="Precusión">
+                    <option value="tambor">Tambor</option>
+                </optgroup>
+                <optgroup label="Otros">
+                    <option value="piano">Piano</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <h3>¿Que deportes practica actualmente?:</h3>
+        <div>
+            <select name="deportesPracticados" multiple>
+                <option value="futbol">Futbol</option>
+                <option value="natacion">Natación</option>
+                <option value="tenis">Tenis</option>
+                <option value="rugby">Rugby</option>
+                <option value="hockey">Hockey</option>
+            </select>
+        </div>
+        <br>
+        <h3>Seleccione su mascota favorita:</h3>
+        <div>
+            <input type="list" name="mascotaFavorita" list="mascotas">
+                <datalist id="mascotas">
+                    <option value="Gatos"></option>
+                    <option value="Perros"></option>
+                    <option value="Taratulas"></option>
+                    <option value="Serpientes"></option>
+                    <option value="Tortugas"></option>
+                    <option value="Hamsters"></option>
+                </datalist>
+            </input>
+        </div>
+        <br>
+        <div>
+            <label for="combustible">Nivel de Combustible:</label><br>
+            <meter id="combustible" value="40" max="100" min="0" low="50"></meter>
+        </div>
+        <br>
+        <div>
+            <label for="progresoHTML">Mi Progreso en el Curso:</label><br>
+            <progress value="60" max="100"></progress>
+        </div>
+    </form>
+</body>
+</html>

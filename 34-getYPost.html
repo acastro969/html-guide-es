@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get y Post</title>
+</head>
+<body>
+    <!--
+        El atributo method de los formularios nos permite enviar la informacion utilizando los metodos GET y POST. La principal diferencia de estos es que en el GET los datos son enviados por URL mientras que en el POST lo envia en el form data de esa petición. Normalmente para el envio de datos de formulario lo correcto seria utilizar el metodo POST. Tambien es importante remarcar que los unicos datos que seran enviados seran los de aquellos input los cuales tienen un atributo name asignado.
+     -->
+    <h2>Formulario de Registro con GET:</h2>
+    <form action="registro.php" method="GET">
+        <div>
+            <label for="nombre1">Nombre:</label>
+            <input id="nombre1" name="nombre1" placeholder="Ingrese su nombre" type="text" required>
+        </div>
+        <br>
+        <div>
+            <label for="apellido1">Apellido:</label>
+            <input id="apellido1" name="apellido1" placeholder="Ingrese su apellido" type="text" required>
+        </div>
+        <br>
+        <input type="submit">
+    </form>
+
+    <h2>Formulario de Registro con POST:</h2>
+    <form action="registro.php" method="POST">
+        <div>
+            <label for="nombre2">Nombre:</label>
+            <input id="nombre2" name="nombre2" placeholder="Ingrese su nombre" type="text" required>
+        </div>
+        <br>
+        <div>
+            <label for="apellido2">Apellido:</label>
+            <input id="apellido2" name="apellido2" placeholder="Ingrese su apellido" type="text" required>
+        </div>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

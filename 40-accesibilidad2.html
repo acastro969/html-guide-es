@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad II</title>
+</head>
+<body>
+    <!-- 
+        Etiquetas y atributos de accesibilidad:
+
+            label: Siempre q sea posible hay q utilizar el elemento label para asociar un texto a nuestros elementos de formulario de forma explicita. El atributo for de los label debe coincidir con el id del campo de formulario.
+
+            role: Permiten añadir información sobre el proposito de los elementos del sitio. Este "proposito" sera leído en voz alta por los lectores de texto en pantalla.
+
+            aria-label: El atributo aria-label puede servirnos cuando no es desable o practico colocar un label. Por ejemplo si tuvieramos un botón de cierre con el texto X de cerrar, el hecho de que el lector de pantalla lea en voz alta "X" no le dice nada al usuario, pero en este caso si posee un aria-label con valor "Close" dejaria mucho más en claro para aquel usuario no vidente de que se trata.
+
+            tabindex: Especifica el orden de tabulación del elemento para cuando la tecla tabulador es utilizada para navegar por el sitio. El atributo puede ser utilizado por cualquier elemento sin embargo no es necesariamente útil. Pero puede ayudar a las personas con discapacidad que navegen los sitios utilizando esta tecla. El primer valor seria 1 y el máximo 32767.
+
+            aria-valuenow: Puede leer en voz alta el valor actual de una barra de progreso o de medidas.
+    -->
+    <h2 tabindex="1">Mi progreso con el curso de HTML</h2>
+    <progress tabindex="2" role="progressbar" aria-label="Progreso en curso de HTML" aria-valuenow="90" value="90" max="100"></progress>
+    <p tabindex="3">Lorem ipsum dolor sit amet.</p>
+
+    <h2 tabindex="4">Formulario de Contacto</h2>
+    <form action="procesador.php">
+        <fieldset tabindex="5">
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text">
+    
+            <label for="apellido">Apellido:</label>
+            <input id="apellido" type="text">
+        </fieldset>
+        <input type="submit" aria-label="Enviar formulario">
+    </form>
+</body>
+</html>

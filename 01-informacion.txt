@@ -1,0 +1,68 @@
+* Navegador Web:
+    El proposito de los navegadores web es el de leer los documentos HTML y desplegarlos correctamente.
+
+* Editores HTML:
+    Las paginas web pueden ser creadas y modificadas usando editores profesionales, aun asi es posible utilizar editores de textos simples para esto como Notepad, pero claramente esto no es recomendado.
+
+* Codigo fuente HTML:
+    Es posible ver el codigo fuente HTML de cualquier Web generalmente dando click derecho sobre la web y seleccionando la opcion correspondiente o utiliazndo el atajo CTRL + U en la mayoria de los navegadores. Tambien se pueden inspeccionar elementos individuales con la opcion "Inspeccionar" o "Inspeccionar Elemento", de esta manera se puede observar el codigo HTML de los elementos y sus estilos.
+
+* IP:
+    Identificador numero de una pagina web, es unico y reperesenta la direccion donde esta el ordenador q contiene esa web.
+
+* Dominio:
+    Es el nombre asociado a la IP al que utilizamos para solicitar recursos.
+
+* URL:
+    Uniform Resources Locator
+
+* DNS:
+    Domain Name System. Traducen el nombre de dominio a su identificador, asocial el nombre a la IP.
+
+* Sitio web:
+    Conjunto de uno o varios recursos web alojados en el mismo dominio.
+
+* Servidor web:
+    Un ordenador cuyo objetivo es servir recursos web.
+
+* Hosting:
+    Almacenamiento del servidor web.
+
+* Peticion:
+    Accion de pedir recursos a un servidor.
+
+* HTML:
+    Lenguaje de marcado de hipertexto (Hyper Text Markup Language)
+
+    HTML No es un lenguaje de programacion. Estos tienen algoritmos, logicas, variables, etc. De las que HTML carece.
+
+    Las etiquetas le dicen al navegador y a los motores de busqueda cual es la estructura del documento, los elementos, la organizacion, etc.
+
+    Las Paginas Web son fragmentos, documentos, mientras que cuando hablamos del Sitio Web hablamos de toda la totalidad o el conjunto. 
+
+    Las Paginas Web son entregadas a nosotros (clientes) por los servidores mediante peticiones.
+
+* Comentarios HTML: 
+    Los comentarios no son mostrados por el navegador y pueden ayudar a documentar el codigo fuente. Los comentarios en HTML se escriben de la siguiente forma:
+    <!-- Comentario -->
+    Notese que el simbolo ! no es necesario en el cierre del comentario.
+
+    Ej: 
+    <p>Esto es un parrafo</p>
+    <!-- Recordar agregar mas info aqui -->
+
+    Los comentarios tambien pueden usarse para lineas de codigo, haciendo que estas no se ejecuten o muestren. Esto puede ser util para debuggear.
+    <!-- <p>Esto no se mostraria</p> -->
+
+* Historia HTML:
+    - 1989 Se inicio desarrollo de HTML
+    
+    - 1991 Se lanzo la web basada en los conceptos de http (hypertext transfer protocol), html y url (direccion donde estan los sitios)
+    
+    - 1992 Lanzamiento de HTML, padre SMGL Tim Bernes Lee
+
+    - 1994 Nace W3C Consorcio que define los estandares de la web
+    
+    - Nace WHATWG consorcio paralelo al W3C
+    
+    - HTML5 lanzado por WHATWG

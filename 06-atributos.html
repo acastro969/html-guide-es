@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Atributo lang que define el lenguaje del documento -->
+<head>
+    <meta charset="UTF-8"> <!-- Atributo charset declara la codificación de caracteres de la pagina -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+    <!-- 
+        Los atributos son valores adicionales que configuran a un elemento y/o ajustan su comportamiento. 
+
+        * Todos los elementos HTML pueden tener atributos.
+        * Los atributos siempre son indicados dentro de la etiqueta de apertura.
+        * Hay atributos donde su sintaxis es atributo="valor" y otros booleanos donde solo se colocaria el nombre del atributo.
+        * Es recomendable escribir los atributos y sus valores en minuscula si bien esto no es requerido para su funcionamiento.
+        * Los valores de los atributos pueden ir sin comillas, pero tambien se recomienda colocarlas.
+
+        Atributos mas importantes:
+            id: Atributo global que define un identificador unico para ese elemento pudiendo luego ser usado en CSS o scripts.
+
+            class: Atributo global para la estilizacion de elementos desde CSS. A diferencia de los id las clases estan pensadas para ser reutilizadas por mas de un elemento.
+
+            title: Define un titulo para el elemento, esto generalmente es mostrado como un tooltip cuando el mouse es posicionado sobre el elemento.
+
+            style: Sirve para aplicar estilos de forma directa sobre un elemento, el valor debe ser codigo CSS. Esta forma de aplicar estilos no es recomendada salvo excepciones.
+
+            data-*: Atributo global q nos permite almacenar valores en la etiqueta.
+
+            alt: Especifica un texto alternativo para cuando no logro cargarse el contenido de una imagen.
+
+            width: Indica el ancho del elemento.
+
+            height: Indica el alto del elemento.
+
+            hidden: Atributo booleano que de estar presente hace q se oculte el elemento.
+
+            href: Especifica urls de destino para los a, area, base y link.
+
+            src: Especifica la url del archivo de media.
+     -->
+    <style>
+        .textos {
+            color: red; /* Le doy color rojo a los elementos con esta clase. */
+        }
+    </style>
+</head>
+<body>
+    <p id="parrafo-1">Lorem, ipsum dolor.</p> <!-- ID -->
+    <p class="textos">Lorem, ipsum dolor.</p> <!-- class -->
+    <p title="Esto aparecera como un tooltip explicativo"></p> <!-- title -->
+    <p id="parrafo-2" data-ejemplo="Datos del ejemplo"></p> <!-- data -->
+    <p style="background-color: red;">Lorem, ipsum dolor.</p> <!-- style -->
+    
+    <script>
+        const FIRST_PARAGRAPH = document.getElementById('parrafo-1'); // Tomo el elemento con id parrafo-1
+        const SECOND_PARAGRAPH = document.getElementById('parrafo-2'); // Tomo el elemento con id parrafo-2
+
+        console.log(FIRST_PARAGRAPH.innerText); // Imprimo el contenido de texto del elemento
+        console.log(SECOND_PARAGRAPH.dataset.ejemplo); // Imprimo la data con nombre ejemplo del elemento
+    </script>
+</body>
+</html>

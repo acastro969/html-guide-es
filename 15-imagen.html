@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen</title>
+</head>
+    <!--
+        El contenido embebido se trata de aquel contenido que es introducido desde fuera a nuestro documento.
+        Entre ellos podemos encontrar las imagenes, videos y audio.
+
+        En cuanto a las imagenes, estas pueden ser dividas dentro de dos principales grupos:
+
+        * Imagenes vectoriales:
+            Imagenes digitales formadas por objetos geometricos (segmentos, poligonos, arcos, muros, etc.) definidos por atributos matematicos de forma, posicion, etc.
+
+            El formato utilizado por estas es svg.
+
+        * Imagenes de mapa de bits:
+            Estructura o fichero de datos que representan una rejilla rectangular de pixeles o puntos de color denominada matriz.
+            
+            Entre estas los formatos mas comunes son PNG, JPG, GIF.
+
+        Es importante comprender que la utilizacion de imagenes vectoriales puede aportarnos ventajas frente a las imagenes en pixeles. Ya que estas, por ejemplo, no pierden calidad sin importar a que resolucion se vean o cuanto zoom se le haga a la imagen. Para imagenes simples principalmente geometricas como iconos de redes sociales podemos utilizar SVG. Tambien una de sus ventajas es que practicamente no ocupan espacio.
+
+        Las imagenes en pixeles o de mapa de bits por el contrario si ocupan espacio, pero con el formato WEBP introducido por Google podemos contar con imagenes de mapa de bits mucho mas optimizadas.
+
+        Conversor oficial de Google:
+        https://developers.google.com/speed/webp
+
+        Otro conversor a WEBP disponible:
+        https://www.online-convert.com/
+
+        Para colocar imagenes utilizamos la etiqueta img. Lleva dos atributos obligatorios, src y alt. Esta etiqueta NO lleva etiqueta de cierre, solo de apertura.
+
+        El atributo src es utilizado para indicar la ruta (ya sea relativa o absoluta) al recurso, y alt para especificar que texto mostrar en caso de que la imagen no logre cargar, ademas de ser importante para la accesibilidad puesto a que su texto sera leido por los lectores en pantalla para aquellas personas no videntes o con discapacidades visuales que visiten el sitio.
+
+        En casos excepcionales, como tener una imagen con un mero uso decorativo, podemos dejar el valor del atributo alt vacio, pero siempre debe estar presente en la etiqueta.
+
+        Si la imagen que queremos colocar se trata de una imagen vectorial, podemos incluirla de la misma forma o introduciendo su "codigo" directamente sobre nuestro HTML, siendo la primera la más comun y recomendada siempre y cuando no debamos alterar ese SVG manualmente.
+
+        Para cambiar el tamaño en el que se ven nuestras imagenes podemos utilizar los atributos width y height, ambos llevarian un valor indicando el tamaño en el que necesitamos que se muestre, pero siempre es mas aconsejable definir esto desde CSS.
+
+        Si quisieramos combinar lo visto de enlaces con imagenes, podriamos hacer que un enlace anchor a contenga una img, esto podria hacer que al clickear sobre la imagen me enlace a otro documento o sitio externo.
+    -->
+<body>
+     <img src="assets/gato.jpg" alt="Fotografia de un gatito gris" width="50"> <!-- No es necesario ponerle px al final del width, puesto a que predefinidamente interpreta el valor como pixeles -->
+    <img src="assets/facebook-logo.svg" alt="Logo de Facebook" width="50">
+</body>
+</html>

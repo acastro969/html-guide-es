@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <!-- 
+        Para incluir videos utilizamos la etiqueta video, que al igual que el audio puede ir en una sola etiqueta con el atributo src o englobar varios source distintos en caso de que un formato no sea reconocido por el navegador pase al otro.
+
+        Al igual que con el audio contamos con los atributos controls, autoplay, muted y loop. Si queremos que se reproduzca automaticamente debe estar en autoplay y muted. Tambien tenemos el atributo poster si quisieramos colocarle una imagen de miniatura al video.
+
+        Formatos comunmente soportados:
+        MP4 y WebM. OGG No soportado por Safari
+
+        Media types:
+        MP4: type="audio/mp4"
+        WebM: type="audio/webm"
+        Ogg: type="audio/ogg"
+    -->
+
+    <h2>Video con un solo source</h2>
+    <video controls src="assets/codingVideoMp4.mp4"></video>
+
+    <h2>Video con mas de un source</h2>
+    <video controls poster="assets/gato.jpg">
+        <source src="assets/codingVideoMp4.mp4">
+        <source src="assets/codingVideoWebm.webm">
+        Su navegador no soporta el elemento de video.
+    </video>
+</body>
+</html>

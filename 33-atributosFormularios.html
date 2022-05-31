@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Formularios</title>
+</head>
+<body>
+    <!--
+        placeholder: Define un texto a ser mostrado en el campo input, puede servirnos como refuerzo de lo que debe ingresar el usuario.
+
+        readonly: Define que el campo es de solo lectura y su valor no puede ser modificado desde ese mismo input.
+        A diferencia del disabled, este valor si puede ser enviado en el submit del formulario.
+
+        disabled: Define que el campo esta deshabilitado y el usuario no puede cambiarlo. A diferencia del readonly este no se envía.
+
+        min max: Definen valores minimos o maximos para un input de tipo number. Si intentamos enviar el formulario y el valor del campo es menor o mayor a lo indicado el navegador nos lo va a notificar y no va a hacer el envio hasta q se corrija.
+
+        minlength maxlength: Indica la extensión minima o máxima de caracteres en un input de tipo texto. Si intentamos enviar el formulario y el valor es menor a la extensión minima o mayor a la extensión máxima, no permitira hacer el envio hasta q se corrija. El maxlength tambien hace q no podamos seguir ingresando caracteres si llegamos al máximo.
+
+        required: Indica que el campo es requerido, por lo que no permitira enviar hasta que se haya cargado un valor para ese campo e indicara con un mensaje en el navegador q falta rellenarse.
+
+        value: Indica un valor para el elemento input.
+
+        type: Especifica un tipo para el elemento input.
+
+        onclick: Define que debe ocurrir al ocurrir el evento de click sobre el elemento. (JS)
+
+        onmouseover: Define que debe ocurrir cuando se dispara el evento de haber pasado el mouse por encima del elemento. (JS)
+
+        onkeypress: Define lo que debe ocurrir cuando se dispara el evento de haber escrito una tecla y soltado la misma mientras que el evento que posee el atributo este en foco.
+
+        onchange: Define lo que debe ocurrir cuando se dispara el evento de que el valor del elemento ha cambiado.
+
+        Es importante entender que las validaciones por atributo no cubren la seguridad de nuestro formulario, puesto a que pueden ser quitadas por el usuario utilizando herramientas basicas como el inspeccionar elemento, es por esto que tambien solemos tener validaciones por JavaScript y otras desde el lado del servidor para garantizar que no se ingrese nada fuera de lo esperado o se salte alguna validacion.
+     -->
+    <h2>Formulario de Registro:</h2>
+    <form action="registro.php">
+        <div>
+            <label for="nombreUsuario">Nombre de Usuario:</label>
+            <input id="nombreUsuario" name="nombreUsuario" placeholder="Ingrese un nick" type="text" minlength="5" maxlength="10" required>
+        </div>
+        <br>
+        <div>
+            <label for="rolUsuario">Rol:</label>
+            <input id="rolUsuario" name="rolUsuario" type="text" value="Estudiante" readonly>
+        </div>
+        <br>
+        <div>
+            <label for="edadUsuario">Edad:</label>
+            <input id="edadUsuario" name="edadUsuario" type="number" min="15" max="99" required>
+        </div>
+        <br>
+        <div>
+            <label for="claveUsuario">Clave:</label>
+            <input id="claveUsuario" name="claveUsuario" placeholder="Ingrese una nueva clave" type="text" minlength="8" maxlength="20" required>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Registrarse">
+        </div>
+    </form>
+</body>
+</html>

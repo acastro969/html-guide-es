@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colgroup</title>
+    <style>
+        * { /* Hago blanco el texto de todos los elementos. */
+            color: white;
+        }
+
+        table, th, td { /* Le coloco un borde negro a la tabla, a sus encabezados y a las celdas */
+            border: 1px solid black;
+        }
+
+        colgroup col:first-child { /* Selecciono primer hijo del grupo de columnas */
+            background-color: dodgerblue;
+        }
+        
+        colgroup col:last-child { /* Selecciono ultimo hijo del grupo de columnas */
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- Podemos utilizar el colgroup para seleccionar y estilizar columnas especificas.
+    Para utilizar colgroup debemos incluir la etiqueta colgroup inmediatamente bajo el titulo caption de nuestra tabla si lo tuviera, si no va inmediatamente tras la declaracion del table.
+
+    Nuestro colgroup estaria compuesto por etiquetas col por cada columna, y si quisieramos seleccionar mas de una columna a la vez, podemos especificarselo a la etiqueta col mediante el atributo span. -->
+
+    <table>
+        <caption>Productos</caption>
+        <colgroup>
+            <col span="2"> <!-- Aplica a la primer columna y a la segunda -->
+            <col> <!-- Aplica a la ultima restante, la tercera -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Monitor</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, soluta.</td>
+            <td>$34.980</td>
+        </tr>
+        <tr>
+            <td>Teclado</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ab!</td>
+            <td>$15.700</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</td>
+            <td>$5.696</td>
+        </tr>
+    </table>
+</body>
+</html>

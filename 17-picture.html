@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+</head>
+<body>
+    <!-- 
+        Si tenemos una imagen de grandes dimensiones no siempre va a ser necesario que carguemos esta misma "tal cual" para la vista mobile de nuestro sitio. Podemos en cambio decirle al navegador que cargue en su lugar una imagen de dimensiones más pequeñas si se esta visualizando desde resoluciones mas chicas.
+
+        Para esto entra en juego la etiqueta Picture. Dentro llevaria elementos source que constaria de los atributos srcset (de donde buscar el recurso) y media (para que resolucion). Tambien cuando colocamos un picture va a ser necesario le coloquemos un elemento img dentro, este se desplegaria en caso de que los navegadores no soporten los formatos de los source anteriores.
+
+        En el ejemplo siguiente, vamos a ver la carga de una imagen WEBP para Desktop, remplazada por otra mas pequeña cuando se esta en mobile y una última en formato JPG en caso de que no logren cargar las anteriores.
+
+        Es importante tener en cuenta que la resolucion en pixeles utilizadas para el atributo media son expresadas en pixeles del viewport. El viewport refiere a cuanto tamaño disponible hay en nuestra ventana del navegador, la cual va a depender en parte de el tamaño de nuestra pantalla.
+        Saber mi viewport: https://whatismyviewport.com/
+        min-width hace referencia a hasta que resolucion para abajo se tiene q ver. Y max width hasta que resolución para arriba se tiene q ver.
+    -->
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="assets/gatoWebp.webp"> <!-- Hasta 650 voy a ver esto -->
+        <source media="(min-width: 465px)" srcset="assets/gatoMobileOptimized.webp"> <!-- Desde 650 hasta 465 voy a ver esto -->
+        <img src="assets/gato.jpg" alt="Fotografía de un gato gris"> <!-- Debajo de 465 o si no logra cargar anteriores voy a ver esto -->
+    </picture>
+</body>
+</html>

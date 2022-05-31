@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios II</title>
+</head>
+<body>
+    <!-- 
+        Más elementos de formulario:
+        
+        fieldset: Nos va a permitir agrupar campos bajo una misma tematica. Encerrariamos todos estos campos en ese mismo fieldset. Ademas podemos indicar un titulo para ese grupo de campos con la etiqueta legend. Esta etiqueta legend deberiamos colocarla tras la apertura del fieldset.
+
+        Tipos de Input (1):
+
+        text: Es el valor por defecto que admite texto, caracteres especiales y numeros.
+
+        email: Define un campo para la dirección de e-mail, tiene una validación automatica para asegurar que el e-mail este bien formateado. Además nos mostrara los datos guardados por el navegador para otros campos de ese tipo.
+
+        tel: Representa un campo para el numero telefonico, si lo utilizamos desde un dispositivo movil nos mostrara el teclado numerico para este campo de forma automatica.
+
+        date: Permite el ingreso de fechas y despliega un calendario.
+        time: Permite ingresar horas y minutos.
+
+        url: Nos sirve para ingresar enlaces, tambien nos pre-cargara enlaces que ya hayamos utilizado.
+
+        password: Oculta la contraseña mientras la ingresamos en el navegador, esto es algo estetico puesto a que la contraseña sigue allí y puede ser facilmente visible.
+
+        number: Limita el campo a solo numeros y muestra unas flechitas para ir colocando valores más altos o más bajos (widgets)
+
+        color: Nos permite seleccionar un color el cual en el envío sera tomado como su código hex.
+
+        hidden: Estaria oculto, y podemos desplegarlo en funcion de otro valor seleccionado o marcado por el usuario, y ahí pasarlo a otro tipo como text. Esto se hace desde JavaScript. Los input de tipo hidden siguen visibles en el DOM.
+     -->
+    <h2>Registro</h2>
+    <form action="registro.php">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input id="apellido" name="apellido" type="text">
+            </div>
+            <br>
+            <div>
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input id="fechaNacimiento" name="fechaNacimiento" type="date">
+                <input name="horaNacimiento" type="time">
+            </div>
+            <br>
+            <div>
+                <label for="dni">Foto del DNI:</label>
+                <input id="dni" name="dni" type="file">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Información de Contacto</legend>
+            <div>
+                <label for="email">Dirección de e-mail:</label>
+                <input id="email" name="email" type="email">
+            </div>
+            <br>
+            <div>
+                <label for="nroCelular">Numero de Celular:</label>
+                <input id="nroCelular" name="nroCelular" type="tel">
+            </div>
+            <br>
+            <div>
+                <label for="linkedin">Perfil de LinkedIn:</label>
+                <input id="linkedin" name="linkedin" type="url">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Otros</legend>
+            <div>
+                <label for="clave">Clave:</label>
+                <input id="clave" name="clave" type="password">
+            </div>
+            <br>
+            <div>
+                <label for="preguntaSeguridad">¿Cuanto es 2 + 2?:</label>
+                <input id="preguntaSeguridad" name="preguntaSeguridad" type="number">
+            </div>
+            <br>
+            <div>
+                <label for="colorFavorito">Color Favorito:</label>
+                <input id="colorFavorito" name="colorFavorito" type="color">
+            </div>
+        </fieldset>
+        <br>        
+        <div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar Campos</button>
+        </div>
+    </form>
+</body>
+</html>

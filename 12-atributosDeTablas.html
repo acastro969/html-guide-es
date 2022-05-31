@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de Tablas</title>
+    <style>
+        table tbody td:first-child {
+            background-color: lightblue;
+        }
+
+        table thead tr:first-child {
+            background-color: lightblue;
+        }
+
+        table tbody tr:nth-child(4) {
+            background-color: lightblue;
+        }
+
+        tfoot {
+            background-color: lightblue;
+        }
+
+        table, th, td, tr { /* Le colocamos un borde negro a todo para que se vea mas claro */
+            border: 1px solid black;
+        }
+
+        td { /* Centro el texto de los table data */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        rowspan: Hacemos que una celda ocupe mas de una fila.
+        colspan: Hacemos que una celda ocupe mas de una columna.
+    -->
+    <table>
+        <caption>HORARIO DE CLASES</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>L</th>
+                <th>M</th>
+                <th>X</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        </thead> 
+        <tr>
+            <td>8:30 - 9:30</td>
+            <td>Matemáticas</td>
+            <td>Matemáticas</td>
+            <td>Sociales</td>
+            <td>Matemáticas</td>
+            <td>Matemáticas</td>
+        </tr>
+        <tr>
+            <td>9:30 - 10:25</td>
+            <td>Lengua</td>
+            <td>Lengua</td>
+            <td>Matemáticas</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+        </tr>
+        <tr>
+            <td>10:25 - 11:20</td>
+            <td>Educación Física</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+            <td>Lengua</td>
+            <td>Educación Física</td>
+        </tr>
+        <tr>
+            <td>11:20 - 11:45</td>
+            <td colspan="5">R E C R E O</td> <!-- Le digo a esta celda que ocupe las 5 columnas restantes -->
+        </tr>
+        <tr>
+            <td>11:45 - 12:40</td>
+            <td>Inglés</td>
+            <td>Sociales</td>
+            <td>Inglés</td>
+            <td>Tutoría</td>
+            <td>Inglés</td>
+        </tr>
+        <tr>
+            <td>12:40 - 13:35</td>
+            <td rowspan="2">Tecnología</td> <!-- Suponiendo que tecnologia se repite en la sig. hora, le digo que ocupe tanto esta fila como la siguiente -->
+            <td>Educación Física</td>
+            <td>Plástica</td>
+            <td>Religión</td>
+            <td rowspan="2">Tecnología</td>
+        </tr>
+        <tr>
+            <td>13:35 - 14:30</td>
+            <!-- Aca no iria td alguno, porque ya el de arriba esta ocupando el de esta fila tmb -->
+            <td>Francés</td>
+            <td>Tecnología</td>
+            <td>Francés</td>
+            <!-- Aca no iria td alguno, porque ya el de arriba esta ocupando el de esta fila tmb -->
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total de materias</td>
+                <td>12</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

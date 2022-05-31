@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrames</title>
+</head>
+<body>
+    <!-- 
+        Para embeber otras paginas dentro del documento HTML actual se utiliza la etiqueta iframe, la cual se comporta como de linea.
+
+        Como atributos tenemos entre otros:
+
+        height: Especifica el alto (el default es de 150px)
+
+        width: Especifica el ancho (el default es de 300px)
+
+        src: Especifica la dirección del documento a embeber en el iframe.
+
+        title: Indica un titulo para los lectores de texto en pantalla, es recomendado siempre incluirlo por cuestiones de accesibilidad.
+
+        frameborder: 0 o 1, indicando si debe o no llevar un marco/borde. Esta obsoleto y se recomienda indicar border 0 desde css.
+
+        allowfullscreen: Atributo booleano que indica si permite o no se coloque en pantalla completa el contenido del iframe.
+
+        La forma mas facil de reproducir video en nuestras web es con YouTube, y otra de las posibilidades de los iframe es hacer esto mismo.
+
+        Si definmos un iframe en el cual el atributo src apunta a la url de un video podemos embeber ese video en nuestro sitio. Tambien podemos copiar el codigo de insercion de este iframe simplemente yendonos al video en YouTube y haciendo click derecho y dandole a la opcion correspondiente.
+
+        Si quisieramos reproducirlo automaticamente este debe contar con los parametros autoplay=1 y mute=1 en su URL. Tambien podemos hacer que el video se reproduzca en loop con loop=1 y quitar los controles visuales con controls=0. Es importante reiterar que estos no son atributos del iframe si no parametros que acepta YouTube en su URL para configurar como se debe mostrar ese video.
+
+        Ej: https://www.youtube.com/embed/url?autoplay=1&mute=1
+    -->
+    <iframe width="1280" height="739" src="https://www.youtube.com/embed/gCEK2s8SjTk?list=RDgCEK2s8SjTk" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>

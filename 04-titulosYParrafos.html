@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulos y Parrafos</title>
+    <!--
+        Los encabezados (headings) serian los titulos o subtitulos que querramos mostrar en el sitio.
+
+        Los mismos estan definidos desde la etiqueta h1 hasta la 6 siendo el h1 el encabezado con mas importancia y el h6 el de menos.
+
+        Los motores de busqueda analizan nuestros headers para estructurar e indexar el contenido de nuestra web. Es por esto que los header no deben utilizarse solo para hacer un texto mas grande o notorio.
+
+        Los parrafos son representados con la etiqueta p (paragraph).
+
+        Si colocamos mas de un espacio entre las palabras de un parrafo p estos espacios no van a mostrarse y automaticamente el navegador lo mostrara como si tuviera solo un espacio entre medio, lo mismo ocurre con los saltos de linea. Para solucionar esto tenemos la etiqueta pre, la cual nos sirve para mantener el formato del contenido original. Por ejemplo podriamos utilizarlo para codigo, poemas, letras de canciones, etc. Predefinidamente el navegador lo muestra en fuente monospace.
+        
+        En caso de querer forzar un salto de linea dentro de un parrafo podemos utilizar la etiqueta br de Break Line, la cual "romperia" la linea y haria que lo que le siga comience en una nueva, desde ya esto no debe utilizarse para separar elementos de manera vertical puesto a que esto debe ser hecho desde CSS. La misma no necesita tag de cierre.
+
+        Tambien tenemos la etiqueta hr de Horizontal Rule, que representa una linea separatoria generalmente utilizada para indicar que hay un cambio de tema, escena o transicion. Esta no necesita tag de cierre.
+    -->
+</head>
+<body>
+    <h1>Harry Potter</h1> <!-- Encabezado de mayor jerarquia, titulo principal de lo q estamos hablando -->
+
+    <h2>Sinopsis</h2> <!-- Seria parte de Harry Potter -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sed sint, molestiae aliquid ullam voluptate enim consectetur vitae rerum nulla.</p>
+    <h2>Novelas</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h3>Harry Potter y la Piedra Filosofal</h3> <!-- Seria parte del contenedor de novelas -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui perspiciatis mollitia dignissimos sapiente. Vel.</p>
+    <h4>Personajes</h4> <!-- Pertenece a Harry Potter y la Piedra Filosofal -->
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <p>Texto de                   ejemplo</p> <!-- Al mostrarse desde el navegador le quita el espacio entre de y ejemplo y pasa a tener solo un espacio de por medio -->
+    <pre>Texto de                 ejemplo</pre> <!-- Respeta los espacios -->
+    
+    <pre> <!-- Tambien respeta los saltos de linea -->
+        Hola,
+
+        ¿Que tal?
+    </pre>
+</body>
+</html>

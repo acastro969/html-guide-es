@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios I</title>
+</head>
+<body>
+    <!-- 
+        Los formularios permiten obtener un input del usuario, en estos podemos solicitarle datos que
+        luego seran enviados y procesados. Generalmente todos los sitios, excepto los que son solo informativos, hacen uso de los formularios. Ejemplos de estos pueden ser un formulario de registro o de contacto.
+
+        Para definir un formulario utilizamos la etiqueta form, esta englobara todos los campos de nuestro
+        formulario.
+
+        Luego tenemos los label, para indicar el nombre de los campos, los input para colocar campos rellenables por el usuario, y los button. Podemos utilizar estos últimos para varias acciones, entre ellas enviar o resetear el formulario.
+
+        Por cuestiones de accesibilidad, deberiamos colocar labels para nuestros input. Estos van a ser leidos por los lectores de texto en pantalla, además, para esos label deberiamos colocar un atributo for que referencie al atributo id del input. Haciendo esto, lograremos que se pueda clickear en el label para seleccionar el input, cosa tambien útil para la gente mayor que quizas no tenga una precisión muy alta a la hora de intentar hacer click en nuestros campos.
+
+        Es importante que nuestros input lleven un atributo name, ya que a la hora de enviar el formulario estos nos sirven para tomar los valores ingresados, solo los valores de los elementos con atributo name seran enviados. Si bien no hay un estandar para los name, es bueno colocarlos ya sea utilizando la convención camelCase o snake_case.
+
+        Para enviar nuestros formularios podemos utilizar tanto un input con type submit como un button, la utilización de cada uno dependera más que nada de si debemos colocar otros elementos dentro, puesto que input no puede llevar contenido, pero la etiqueta button sí que puede. Tanto si quisieramos decir que un button o un input realicen la acción de submit o limpieza de campos (reset) debemos especificarlo en su atributo type.
+
+        Si quisieramos que el usuario complete un campo de texto pero de una extensión más larga que una linea, podemos utilizar el elemento textarea. Este posee algunos atributos base como cols que define la anchura de la caja de texto y rows que define la cantidad de lineas.
+     -->
+    
+    <h2>Contactame</h2>
+    <form action="contacto.php"> <!-- Atributo action define el documento que va a procesar el formulario -->
+        <div> <!-- Los encierro en la etiqueta de bloque div para agruparlos y separarlos -->
+            <label for="nombre">Nombre:</label><br> <!-- br Utilizado solo para fines del ejemplo -->
+            <input id="nombre" name="nombre" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="apellido">Apellido:</label><br>
+            <input id="apellido" name="apellido" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="comentarios">Comentarios:</label><br>
+            <textarea id="comentarios" name="comentarios" cols="30" rows="5"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Enviar formulario">
+            <input type="reset" value="Limpiar campos">
+        </div>
+    </form>
+</body>
+</html>

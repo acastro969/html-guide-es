@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantica</title>
+    <!-- 
+        Los elementos semanticos son aquellos que definen de form aclara su proposito mediante su nombre, es tanto util para el navegador como para el desarrollador.
+    
+        Ejemplo elementos semanticos:
+
+            header: Representa un contenedor para contenido introductorio o un conjunto de enlaces de navegacion.
+                Generalmente los header contienen elementos h1,2,3,4,5 o 6, un logo o icono, enlaces de navegacion o informacion sobre autoria
+                Importante: Puede tenerse mas de un elemento header en nuestro HTML; sin embargo no podemos colocar un header entre las etiquetas de footer, address o dentro de otro elemento header.
+
+            nav: Define un conjunto de enlaces de navegacion, pensado para contener nuestro bloque principal de enlaces, por lo general en el header.
+
+            main: Define un contenedor para el contenido principal del documento. El contenido principal del documento debe ser unico a ese mismo, no debe tener en su interior contenido que es repetido entre las secciones del sitio tal como el header y el footer. Tambien, no debe haber mas de un main por documento ni ser hijo de elementos como article, aside, footer, header o nav. Generalmente puede ser entendido como "todo lo que queda cuando quitamos nuestro header y footer" o "lo que esta entre el header y el footer pero por fuera".
+
+            article: Especifica contenido independiente y autonomo con sentido por si solo y que debe ser posible distribuirlo por el sitio sin que lo pierda. Ejemplos comunes de utilizacion son en posteos de foros, publicaciones de blog y articulos de diario. Obligatoriamente deben llevar por lo menos un encabezado.
+
+            section: Especifica una seccion del documento con contenido agrupado generalmente bajo la misma tematica. Obligatoriamente deben llevar por lo menos un encabezado.
+
+            footer: Define un pie para el documento (pie de pagina) o para secciones del sitio
+            Generalmente los footer contienen informacion de autoria, de copyright, contacto, o enlaces
+
+            aside: Representa una seccion de una pagina que esta indirectamente relacionada con el contenido principal, generalmente es colocado de lado de este contenido principal y suele contener, por ejemplo, definiciones de glosario.
+
+        Ejemplos de otros elementos semanticos:
+
+            details y summary: El elemento details es utilizado a la par con summary. El contenido del summary seria desplegado y el usuario podria visualizar detalles extra sobre este haciendo click. Esto puede ser util por ejemplo para hacer un FAQ.
+            
+            figure y figcaption: El elemento figure hace referencia a una imagen que si bien este relacionada a un articulo, no sea de vital importancia para el mismo, si no que funcione como decoracion o complemento. Figcaption seria la descripcion visible de la misma.
+
+            address: Sirve para indicar informacion de contacto para el articulo mas cercano o para el cuerpo. En caso de aplicarselo al cuerpo se entiende como la informacion de contacto referente a todo el documento. Predefinidamente el navegador coloca su contenido en italica. La informacion bien puede ser un email, una url, una direccion fisica real, un numero de telefono, etc.
+
+            time: Indica un tiempo especifico
+
+        Ejemplo elementos no semanticos:
+
+            div: Es un contenedor generico, por si solo no nos dice nada, pero podemos utilizarlo para agrupar y estilizar contenido.
+
+            span: Contenedor en linea generalmente usado para modificar pequeñas porciones en los parrafos.
+     -->
+     <style>
+         .textoRojo {
+             color: red;
+         }
+     </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Mi Sitio Web</h1>
+        </div>
+        <nav>
+            <ul>  
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Novedades</h2>
+
+            <article>
+                <h3>Novedad 1</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab soluta enim molestias animi fugit assumenda deserunt vel quia voluptatem consequatur?</p>
+                <p>Mediante el uso de span puedo modificar individualmente <span class="textoRojo">una porcion</span> de un parrafo.</p>
+
+                <p><time>2020-07-07 14:23</time></p>
+            </article>
+
+            <article>
+                <h3>Novedad 2</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quae aperiam ullam aliquid mollitia sed?</p>
+
+                <p><time>2020-06-10 10:35</time></p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Nuestros Productos</h2>
+    
+            <article>
+                <h3>Producto 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat excepturi eveniet natus sed praesentium cum!</p>
+            </article>
+        
+            <article>
+                <h3>Producto 2</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et maxime ea labore voluptas tempore nam.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>FAQ</h2>
+
+            <details>
+                <summary>¿Lorem, ipsum dolor?</summary>
+                <p>Lorem ipsum dolor sit.</p>
+            </details>
+
+            <details>
+                <summary>¿Lorem ipsum dolor sit amet consectetur?</summary>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, perspiciatis.</p>
+            </details>
+            
+            <details>
+                <summary>¿Lorem ipsum dolor, sit amet consectetur adipisicing?</summary>
+                <p>Lorem, ipsum.</p>
+            </details>
+        </section>
+    </main>
+    
+    <aside>
+        <p>Enlaces utiles</p>
+        <ul> 
+            <li><a href="#">Lorem, ipsum dolor.</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+            <li><a href="#">Lorem, ipsum.</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <address>
+            Tony Stark <br>
+            Malibú 10880 <br>
+            90265 <br>
+            California
+        </address>
+    </footer>
+</body>
+</html>
